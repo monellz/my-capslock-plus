@@ -8,7 +8,6 @@
       "description": "CapsLock to Hyper",
       "manipulators": [
         {
-          "type": "basic",
           "from": {
             "key_code": "caps_lock",
             "modifiers": {
@@ -31,7 +30,38 @@
             {
               "key_code": "caps_lock"
             }
-          ]
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Left Shift to Switch Language",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "type": "basic"
         }
       ]
     },
